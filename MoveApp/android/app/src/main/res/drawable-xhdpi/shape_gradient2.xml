@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="45"
+        android:endColor="@color/color_188BF1"
+        android:startColor="@color/color_37D9FC"
+        android:gradientRadius="@dimen/dp_15"
+        />
+    <!-- 连框宽度和颜色值 -->
+
+    <corners android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp" />
+</shape>

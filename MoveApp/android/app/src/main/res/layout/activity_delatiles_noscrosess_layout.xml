@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/color_move_FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45">
+
+        <ImageView
+            android:id="@+id/callbaclk"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/icon_navback" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/com_work_detile_no"
+            android:textColor="@color/color_move_000000"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/boxPageState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/listnone"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_move_FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    android:background="@color/color_move_f4f4f4" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:text="@string/com_work_detile_noscrosess_error"
+                    android:textColor="@color/color_move_000000"
+                    android:textSize="@dimen/sp_18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@color/color_move_dddddd" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_noscrosess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    android:background="@color/color_move_f4f4f4" />
+
+                <LinearLayout
+                    android:id="@+id/linear_yaoqiu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:text="@string/com_work_detile_noscrosess_requirement"
+                        android:textColor="@color/color_move_000000"
+                        android:textSize="@dimen/sp_18" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:background="@color/color_move_dddddd" />
+
+                    <RelativeLayout
+                        android:id="@+id/updatedata"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:text="@string/com_work_detile_noscrosess_requirementdata" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/date_tx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_5" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_20"
+                                android:layout_height="@dimen/dp_20"
+                                android:src="@mipmap/icon_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/color_move_dddddd" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/updatetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:text="@string/com_work_detile_noscrosess_requirementtime" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_20"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/timer_tx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dp_5" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_20"
+                                android:layout_height="@dimen/dp_20"
+                                android:src="@mipmap/icon_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/color_move_dddddd" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_10"
+                        android:background="@color/color_move_FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="@string/com_work_detile_noscrosess_requirementdelatile"
+                        android:textColor="@color/color_move_000000"
+                        android:textSize="@dimen/sp_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="@string/com_work_detile_noscrosess_requirementdelatile2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@color/color_move_dddddd" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_marginLeft="@dimen/dp_15">
+
+                    <EditText
+                        android:id="@+id/eddata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/com_work_detile_noscrosess_requirementhint"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/com_work_detile_noscrosess_requirementright" />
+                </RelativeLayout>
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/tijiao_recycle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/dp_15"-->
+                <!--android:clipChildren="true" />-->
+                <com.lianjie.andorid.newsView.AutoLinefeedLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15">
+
+                    <ImageView
+                        android:id="@+id/addImage"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_alignEnd="@id/timer_tx"
+                        android:padding="@dimen/dp_5"
+                        android:src="@mipmap/add_pic" />
+                    <!--</RelativeLayout>-->
+                </com.lianjie.andorid.newsView.AutoLinefeedLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btsubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/color_move_4C90F3"
+            android:gravity="center_vertical"
+            android:text="@string/com_work_detile_noscrosess_requirementsubmit"
+            android:textAlignment="center"
+            android:textColor="@color/color_move_f4f4f4" />
+    </LinearLayout>
+</LinearLayout>

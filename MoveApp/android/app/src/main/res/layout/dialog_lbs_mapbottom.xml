@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_move_FFFFFF">
+
+    <TextView
+        android:id="@+id/txmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="腾讯地图"
+        android:textAlignment="center"
+        android:textColor="@color/color_move_000000" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_move_dddddd"/>
+
+    <TextView
+        android:id="@+id/gdmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="高德地图"
+        android:textAlignment="center"
+        android:textColor="@color/color_move_000000" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="@color/color_move_dddddd"/>
+
+    <TextView
+        android:id="@+id/cannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="取消"
+        android:textAlignment="center"
+        android:textColor="@color/color_move_000000" />
+
+
+</LinearLayout>

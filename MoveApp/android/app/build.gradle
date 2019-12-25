@@ -1,0 +1,148 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.lianjie.andorid"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        resConfigs "zh"//只支持中文
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ["libs"]
+        }
+    }
+
+
+
+    signingConfigs {
+        release {
+            storeFile file(MYAPP_RELEASE_STORE_FILE)
+            storePassword MYAPP_RELEASE_STORE_PASSWORD
+            keyAlias MYAPP_RELEASE_KEY_ALIAS
+            keyPassword MYAPP_RELEASE_KEY_PASSWORD
+
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'\
+                signingConfig signingConfigs.release
+            lintOptions {
+
+                checkReleaseBuilds false
+
+                abortOnError false
+
+            }
+        }
+        debug{
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+        }
+
+    }
+
+
+}
+
+dependencies {
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //RN集成
+    implementation 'com.facebook.react:react-native:+'
+
+    //RN新版本  navigation 必jia
+    implementation project(':react-native-gesture-handler')
+
+    //网络请求
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+
+    //    //Gson 解析
+
+    //    implementation 'com.google.code.gson:gson:2.2.4'
+
+    //网络请求所用retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    //网络请求所用Gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //Rxjava & RxAndroid
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //design
+    implementation 'com.android.support:design:28.0.0'
+
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+
+    //banner
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    //权限库
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+
+    //时间选择器
+
+    //implementation 'com.contrarywind:wheelview:4.0.9'
+
+    //上传图片得  intercepter
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
+    //流式布局
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+
+    //高仿微信的相册
+
+    //    implementation 'com.zfdang.multiple-images-selector:multiple-images-selector:1.1.5'
+
+    //相机相册  专用
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    //activity和fragment+列表 结合使用的时候 不会有滑动冲突的刷新头
+    implementation 'com.shizhefei:CoolRefreshView:1.0.4'
+
+    //大图控件
+    implementation 'indi.liyi.view:image-viewer:3.0.1'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //时间选择器
+    implementation 'com.contrarywind:Android-PickerView:3.2.7'
+
+    //高德地图
+
+    //带数字的进度条
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    implementation files('libs/AMap3DMap_7.1.0_AMapNavi_7.1.0_AMapSearch_7.1.0_AMapLocation_4.7.2_20191030.jar')
+    //饺子播放器
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.12'
+    implementation 'com.linsea:universalvideoview:1.1.0@aar'
+
+
+//    implementation 'com.shuyu:GSYVideoPlayer:7.1.2'
+    implementation 'anylife.downloadinstaller:downloadInstaller:1.1.1'
+
+
+}
+

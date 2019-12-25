@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_move_f4f4f4">
+
+        <LinearLayout
+            android:id="@+id/pupdata"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_25"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/icon_data" />
+
+            <TextView
+                android:id="@+id/success_datatx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:textColor="@color/color_move_000000"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/success_datatx2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:textColor="@color/color_move_000000"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/icon_arrow" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/boxPageState"
+        android:src="@mipmap/listnone"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

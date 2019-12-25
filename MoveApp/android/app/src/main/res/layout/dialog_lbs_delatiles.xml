@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_10"
+    android:background="@color/color_move_FFFFFF"
+    android:paddingTop="@dimen/dp_10">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/word_my"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"/>
+    <TextView
+        android:id="@+id/drication"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/color_move_000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/dp_5"
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_move_000000"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工单编号："
+           />
+
+        <TextView
+            android:id="@+id/word_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约上门日期"
+            />
+
+        <TextView
+            android:id="@+id/word_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:weightSum="3.5"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <LinearLayout
+            android:id="@+id/delatiles_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/com_login_edshape"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:src="@drawable/check"
+                android:layout_marginRight="@dimen/dp_10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看详情"
+                 />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/map_naviga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/cavas_shape_lbs"
+            android:paddingLeft="@dimen/dp_20"
+            android:text="查看导航路线"
+            android:textColor="@color/color_move_FFFFFF"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:padding="@dimen/dp_10"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+</LinearLayout>

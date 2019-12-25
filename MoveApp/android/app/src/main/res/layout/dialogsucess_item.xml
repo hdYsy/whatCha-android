@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_30"
+    android:layout_marginRight="@dimen/dp_30"
+    android:background="@color/color_move_f4f4f4"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="@string/com_work_submitaudit_dialogtitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:padding="@dimen/dp_20"
+            android:text="@string/com_work_submitaudit_dialogmsg" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/color_move_CACACA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/color_move_f4f4f4"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_40"
+            android:paddingRight="@dimen/dp_40"
+            android:paddingTop="@dimen/dp_10"
+            android:text="取消"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:background="@color/color_move_CACACA" />
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/color_move_f4f4f4"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_40"
+            android:paddingRight="@dimen/dp_40"
+            android:paddingTop="@dimen/dp_10"
+            android:text="确定"
+            android:textAlignment="center"
+            android:textColor="@color/color_move_00CD58" />
+    </LinearLayout>
+</LinearLayout>

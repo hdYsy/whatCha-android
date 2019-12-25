@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_move_FFFFFF">
+    <include
+        android:id="@+id/broad_title"
+        layout="@layout/com_wthk_back"/>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_below="@id/broad_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+            android:background="@color/color_move_f4f4f4"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/audifttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/color_move_000000"/>
+            <TextView
+                android:id="@+id/audiftsubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"/>
+        </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_imglist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addimage_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_move_4C90F3"
+        android:text="提交照片"
+        android:textColor="@color/color_move_FFFFFF" />
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_move_FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_move_FFFFFF">
+
+        <ImageView
+            android:id="@+id/word_my"
+            android:layout_width="@dimen/dp_17"
+            android:layout_height="@dimen/dp_17"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/icon_my" />
+        />
+
+        <ImageView
+            android:id="@+id/word_bell"
+            android:layout_width="@dimen/dp_17"
+            android:layout_height="@dimen/dp_17"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_toRightOf="@id/word_my"
+            android:src="@mipmap/ball" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/com_work_title"
+            android:textColor="@color/color_move_000000"
+            android:textSize="@dimen/dp_17" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_23"
+        android:background="@color/color_move_FEE1E0"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@mipmap/icon_tips" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="  消息提醒:  "
+            android:textColor="@color/color_move_EC7866" />
+
+        <TextView
+            android:id="@+id/work_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_move_EC7866" />
+    </LinearLayout>
+
+    <!--<q.rorbin.qrefreshlayout.QRefreshLayout-->
+    <!--android:id="@+id/pullto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    CoolRefreshView
+
+    <com.shizhefei.view.coolrefreshview.CoolRefreshView
+        android:id="@+id/pullto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/tab_thedoor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tab1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/com_work_tab1"
+                                android:textColor="@color/color_move_4C90F3"
+                                android:textSize="17sp" />
+
+                            <!--<ImageView-->
+                            <!--android:id="@+id/tab1_bot"-->
+                            <!--android:layout_width="@dimen/dp_17"-->
+                            <!--android:layout_height="@dimen/dp_17"-->
+                            <!--android:background="@mipmap/icon_arrow_sel_bot" />-->
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/jintian__"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="2dp"
+                            android:layout_marginRight="@dimen/dp_11"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@color/color_move_4C90F3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab_success"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tab2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/com_work_tab2"
+                            android:textColor="@color/color_move_000000"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/yiwancheng__"
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:background="@color/color_move_4C90F3"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_move_dddddd" />
+
+            <com.lianjie.andorid.newsView.NoScrollViewPager
+                android:id="@+id/work_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <!--</q.rorbin.qrefreshlayout.QRefreshLayout>-->
+    </com.shizhefei.view.coolrefreshview.CoolRefreshView>
+    >
+</LinearLayout>

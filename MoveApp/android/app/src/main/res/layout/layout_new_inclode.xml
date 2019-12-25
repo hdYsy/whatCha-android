@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_move_f4f4f4"
+    >
+
+    <LinearLayout
+        android:id="@+id/Rework_imglinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:background="@color/color_move_FFFFFF"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tx_biaoti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/com_work_detile_imgs"
+                android:textColor="@color/color_move_000000" />
+
+            <TextView
+                android:id="@+id/tx_biaotipage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_toRightOf="@id/tx_biaoti"
+                android:textColor="@color/color_move_000000" />
+            <!--标签-->
+
+            <TextView
+                android:id="@+id/rework_imglinear_gengduo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/com_work_detile_opens"
+                android:textColor="@color/color_move_4C90F3" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/color_move_dddddd" />
+
+        <LinearLayout
+            android:id="@+id/linear_ChiildGrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <com.lianjie.andorid.newsView.AutoLinefeedLayout
+                android:id="@+id/linearNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/addImage"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_alignEnd="@id/timer_tx"
+                    android:src="@mipmap/add_pic"
+                    android:padding="@dimen/dp_5"
+                 />
+
+
+            </com.lianjie.andorid.newsView.AutoLinefeedLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+  >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10"
+    android:weightSum="2"
+    >
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@mipmap/useravatar" />
+
+        <TextView
+            android:id="@+id/room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/toPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toStartOf="@+id/tophone_img"
+            android:textColor="@color/color_move_4C90F3" />
+
+        <ImageView
+            android:id="@+id/tophone_img"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@mipmap/icon_call" />
+    </RelativeLayout>
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_move_dddddd" />
+</LinearLayout>

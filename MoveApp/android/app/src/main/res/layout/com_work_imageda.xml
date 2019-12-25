@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <indi.liyi.viewer.ImageViewer
+        android:id="@+id/imageViewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+        <com.lianjie.andorid.newsView.Viewpager_scroCatch
+            android:id="@+id/imagescale_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

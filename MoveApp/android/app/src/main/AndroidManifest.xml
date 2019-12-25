@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lianjie.andorid">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />    <!--相机权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />    <!--the following two permissions are required if you want to take photo in selector-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <!--<application-->
+    <!--android:name=".rnui.RNApplication"-->
+    <!--android:allowBackup="true"-->
+    <!--android:icon="@mipmap/appicon"-->
+    <!--android:label="@string/app_name"-->
+    <!--android:largeHeap="true"-->
+    <!--android:roundIcon="@mipmap/appicon"-->
+    <!--android:supportsRtl="true"-->
+    <!--android:theme="@style/AppTheme"-->
+    <!--android:usesCleartextTraffic="true"-->
+    <!--&gt;-->
+    <application
+        android:name=".rnui.RNApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <service android:name="com.amap.api.location.APSService"></service>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="4b7561a43919a318c612b35b82b5ef94"></meta-data>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="ccom.lianjie.andorid.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>        <!--初始页面-->
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--RN的两个页面-->
+        <activity
+            android:name=".rnui.RNActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+            android:theme="@style/AppTheme" />        <!--留着当主页面-->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:theme="@style/AppTheme" />        <!--工单列表页-->
+        <activity
+            android:name=".ui.WorkListActivity"
+            android:theme="@style/AppTheme" />        <!--工单详情页-->
+        <activity
+            android:name=".ui.DelatileActivity"
+            android:theme="@style/AppTheme" />        <!--无法完成页-->
+        <activity
+            android:name=".ui.NoScrosess_Activity"
+            android:theme="@style/AppTheme" />        <!--提交审核页-->
+        <activity
+            android:name=".ui.SubmitauditActivity"
+            android:theme="@style/AppTheme" />        <!--&lt;!&ndash;工单完成备注页&ndash;&gt;-->
+        <activity
+            android:name=".ui.WorkOrderActvity"
+            android:theme="@style/AppTheme" />        <!--仿制dialog-->
+        <activity
+            android:name=".ui.DialogActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/dialog_style" />        <!--&相机camera2  人脸识别&gt;-->
+        <activity
+            android:name=".ui.CameraActivity"
+            android:configChanges="orientation|screenSize" />        <!--& 点击进入大图&gt;-->
+        <activity
+            android:name=".ui.ImageDaActivity"
+            android:configChanges="orientation|screenSize" />        <!--& 点击进入大图&gt;-->
+        <activity
+            android:name=".ui.Dialog_Img_activity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/dialog_style" />        <!--&lt;!&ndash;& 保洁员地址&gt;&ndash;&gt;-->
+        <activity
+            android:name=".ui.Addresss_Map_Activity"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".ui.Address_ReycleActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <!--培训视频-->
+        <activity
+            android:name=".ui.TrainingVideoActivity"
+            android:configChanges="orientation|screenSize" />
+        <!--详情-->
+        <activity
+            android:name=".ui.TrainingDeails"
+            android:configChanges="orientation|screenSize" />
+        <!--LBS-->
+        <activity
+            android:name=".ui.LBsNavigation"
+            android:configChanges="orientation|screenSize">
+        </activity>
+
+        <!--开荒-做单前-->
+        <activity
+            android:name=".ui.SubmitauditActivityAuditforward"
+            android:configChanges="orientation|screenSize">
+        </activity>
+    </application>
+</manifest>
